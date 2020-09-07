@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pw-header">
+        <input type="text" id="ipt_pw" class="ipt_pw" disabled />
+        <div class="pw_copy" id="pw_copy">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="40"
+              height="39"
+              transform="translate(0 0.512817)"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.99998 29.7628L5.19435 29.7519C5.95948 29.6652 6.56656 29.0733 6.65543 28.3273L6.66665 28.1378V7.01282H28.3333L28.5277 7.00188C29.3566 6.90802 30 6.22118 30 5.38782C30 4.55446 29.3566 3.86762 28.5277 3.77375L28.3333 3.76282H4.99998L4.80561 3.77375C4.04047 3.8604 3.4334 4.4523 3.34453 5.19831L3.33331 5.38782V28.1378L3.34453 28.3273C3.4334 29.0733 4.04047 29.6652 4.80561 29.7519L4.99998 29.7628ZM35 36.2628L35.1943 36.2519C35.9595 36.1652 36.5666 35.5733 36.6554 34.8273L36.6666 34.6378V11.8878L36.6554 11.6983C36.574 11.0145 36.0571 10.4601 35.3821 10.3057L35.1943 10.2737L35 10.2628H11.6666L11.4723 10.2737C10.7071 10.3604 10.1001 10.9523 10.0112 11.6983L9.99998 11.8878V34.6378L10.0112 34.8273C10.0927 35.5112 10.6096 36.0655 11.2845 36.2199L11.4723 36.2519L11.6666 36.2628H35ZM13.3333 13.5128V33.0128H33.3333V13.5128H13.3333Z"
+              fill="#9B9C9C"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="pw-body">
+        <div class="form-control">
+          <input id="upper" type="checkbox" />
+          <label for="upper">Uppercase</label>
+        </div>
+        <div class="form-control">
+          <input id="lower" type="checkbox" checked />
+          <label for="lower">Lower</label>
+        </div>
+        <div class="form-control">
+          <input id="number" type="checkbox" checked />
+          <label for="number">Numbers</label>
+        </div>
+        <div class="form-control">
+          <input id="symbol" type="checkbox" />
+          <label for="symbol">Symbols</label>
+        </div>
+        <div class="form-control len-control">
+          <label for="len">Password Length</label>
+          <div class="len-container">
+            <input id="len-range" type="range" value="6" min="3" max="99" />
+            <input type="number" id="len-num" value="6" min="3" max="99" />
+          </div>
+        </div>
+      </div>
+      <div class="pw-action">
+        <button class="btn" id="btn_generate">Generate Password</button>
+      </div>
+    </div>
+  </body>
+</html>
